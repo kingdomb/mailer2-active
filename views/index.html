@@ -82,9 +82,7 @@
           text: message
         };
 
-        $.post('/email', data, function() {
-
-          console.log('Server received our data.')
+        $.post("/email", data)
           .then(() => {
             window.location.href = "/email/sent";
           })
@@ -92,7 +90,7 @@
             window.location.href = "/error";
           });
       });
-    });
+    
     </script>
 </body>
 </html>

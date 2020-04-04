@@ -18,11 +18,6 @@ app.use(express.json());
 //STATIC FOLDER
 app.use("/public", express.static(path.join(__dirname, "public")));
 
-// Render home page
-app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'views', 'index.html'));
-});
-
 
 // field data
 app.post('/email', (req, res) => {
@@ -40,6 +35,11 @@ app.post('/email', (req, res) => {
 });
 
 
+// Render home page
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, 'views', 'index.html'));
+});
+
 // Error page
 app.get('/error', (req, res) => {
     res.sendFile(path.join(__dirname, 'views', 'error.html'));
@@ -49,7 +49,6 @@ app.get('/error', (req, res) => {
 app.get('/email/sent', (req, res) => {
     res.sendFile(path.join(__dirname, 'views', 'emailMessage.html'));
 });
-
 
 // Start server
 app.listen(PORT, () => log(`Server is starting on PORT, ${PORT}`));
