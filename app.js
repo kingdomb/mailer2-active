@@ -47,7 +47,7 @@ app.get('/error', (req, res) => {
 
 // Email sent page
 app.get('/email/sent', (req, res) => {
-    res.sendFile('emailMessage.html');
+    res.sendFile('/emailMessage.html');
 });
 
 // Start server
