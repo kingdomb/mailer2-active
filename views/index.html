@@ -1,15 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Contact Me</title>
-    <link href="https://fonts.googleapis.com/css2?family=Blinker:wght@100;200;300;400&display=swap" rel="stylesheet">
+
+  <!-- FAVICON -->
+  <link rel="shortcut icon" href="../favicon_package_v0.16/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="../favicon_package_v0.16/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon_package_v0.16/favicon-32x32.png.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="..//favicon_package_v0.16/favicon-16x16.png">
+  <link rel="manifest" href="../favicon_package_v0.16/site.webmanifest">
+  <link rel="mask-icon" href="../favicon_package_v0.16/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+
+
+  <link href="https://fonts.googleapis.com/css2?family=Blinker:wght@100;200;300;400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css" />
-  <link rel="stylesheet" href="public/css/style.css">
+  <link rel="stylesheet" href="../public/css/style.css">
   <script src="https://kit.fontawesome.com/3376f28ddc.js" crossorigin="anonymous"></script>
+
 </head>
+
 <body>
   <div class="container">
     <h1 class="brand"><span>King</span> Major</h1>
@@ -19,12 +34,13 @@
           <li><i class="fa fa-road"></i>Lawrencville, Ga</li>
           <li><i class="fa fa-phone"></i> (404) 484-9903</li>
           <li><i class="fa fa-envelope"></i> kbmajor80@gmail.com</li>
-          <li><a class="navbar-brand" href="#home"><img src="../public/images/mstile-150x150.png" alt="King's Brand Logo"></a></li>
+          <li><a class="navbar-brand" href="#home"><img src="../public/images/mstile-150x150.png"
+                alt="King's Brand Logo"></a></li>
         </ul>
       </div>
       <div class="contact">
         <h3>Contact Me</h3>
-         <form method="POST" action="send">
+        <form method="POST" action="send">
           <p>
             <label>Name</label>
             <input type="text" name="name" id="name">
@@ -54,43 +70,44 @@
   </div>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script>
-      $("form").on("submit", e => {
-        e.preventDefault();
+  <script>
+    $("form").on("submit", e => {
+      e.preventDefault();
 
-        const name = $("#name")
-          .val()
-          .trim();
-        const subject = $("#subject")
-          .val()
-          .trim();
-        const email = $("#email")
-          .val()
-          .trim();
-        const phone = $("#phone")
-          .val()
-          .trim();
-        const message = $("#message")
-          .val()
-          .trim();
+      const name = $("#name")
+        .val()
+        .trim();
+      const subject = $("#subject")
+        .val()
+        .trim();
+      const email = $("#email")
+        .val()
+        .trim();
+      const phone = $("#phone")
+        .val()
+        .trim();
+      const message = $("#message")
+        .val()
+        .trim();
 
-        const data = {
-          name,
-          subject,
-          email,
-          phone,
-          text: message
-        };
+      const data = {
+        name,
+        subject,
+        email,
+        phone,
+        text: message
+      };
 
-        $.post("/email", data)
-          .then(() => {
-            window.location.href = "/email/sent";
-          })
-          .catch(() => {
-            window.location.href = "/error";
-          });
-      });
-    
-    </script>
+      $.post("/email", data)
+        .then(() => {
+          window.location.href = "/email/sent";
+        })
+        .catch(() => {
+          window.location.href = "/error";
+        });
+    });
+
+  </script>
 </body>
+
 </html>

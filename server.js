@@ -19,7 +19,7 @@ app.use(express.json());
 app.use("/public", express.static(path.join(__dirname, "public")));
 // app.use("/views", express.static(path.join(__dirname, "views")));
 // app.setBaseViewsDir(join(__dirname, '..', 'views'));
-app.useStaticAssets(join(__dirname, '..', 'views'));
+// app.useStaticAssets(join(__dirname, '..', 'views'));
 
 // field data
 app.post('/email', (req, res) => {
@@ -39,7 +39,7 @@ app.post('/email', (req, res) => {
 
 // Render home page
 app.get('/', (req, res) => {
-    res.sendFile('index.html');
+    res.sendFile(path.join(__dirname, 'views', 'index.html'));
 });
 
 // Error page
