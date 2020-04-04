@@ -42,12 +42,12 @@ app.get('/', (req, res) => {
 
 // Error page
 app.get('/error', (req, res) => {
-    res.sendFile(path.join(__dirname, 'views', 'error.html'));
+    res.sendFile('/error.html');
 });
 
 // Email sent page
 app.get('/email/sent', (req, res) => {
-    res.send('/emailMessage.html');
+    res.sendFile('/emailMessage.html');
 });
 
 // Start server
