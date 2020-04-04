@@ -1,0 +1,147 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: #e3e3e3;
+  color: #1d1e22;
+  line-height: 1.6;
+  font-family: "Blinker", sans-serif;
+}
+
+.msg {
+  font-weight: bolder;
+  color: rgb(15, 12, 233);
+  font-size: 1.8rem;
+}
+
+.container {
+  max-width: 1170px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1em;
+}
+
+.fa {
+  color: #8e0000;
+  padding-right: 2%;
+  -webkit-filter: drop-shadow(0px 3px 10px rgba(0, 0, 0, 0.8));
+  filter: drop-shadow(0px 0px 2px rgba(0, 0, 0, 0.8));
+}
+
+ul {
+  list-style: none;
+  font-size: x-large;
+  font-weight: normal;
+  text-shadow: 0.2px 0.2px black;
+  padding: 0;
+}
+
+.brand {
+  text-shadow: 0.2px 0.2px 15px black;
+  padding-left: 3%;
+  text-align: center;
+}
+
+.brand span {
+  color: #8e0000;
+}
+
+.wrapper {
+  box-shadow: 3px 3px 5px 0 rgba(2, 2, 2, 0.7);
+  border-radius: 5px;
+}
+
+.wrapper > * {
+  padding: 1em;
+}
+
+.wrapper .navbar-brand {
+  -webkit-filter: drop-shadow(0px 3px 10px rgba(0, 0, 0, 0.8));
+  filter: drop-shadow(0px 0px 7px rgba(0, 0, 0, 0.8));
+}
+
+.company-info {
+  background: #777;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.company-info h3,
+.company-info ul {
+  text-align: center;
+  margin: 0 0 1rem 0;
+}
+
+.contact {
+  background: rgba(119, 119, 119, 0.829);
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+/* FORM STYLES */
+.contact form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+}
+
+.contact form label {
+  display: block;
+}
+
+.contact form input,
+textarea {
+  border-radius: 8px;
+}
+
+.contact form p {
+  margin: 0;
+}
+
+.contact form .full {
+  grid-column: 1 / 3;
+}
+
+.contact form button,
+.contact form input,
+.contact form textarea {
+  width: 100%;
+  padding: 1em;
+  border: 1px solid #1d1e22;
+}
+
+.contact form button {
+  background: #8e0000;
+  color: #777;
+  font-weight: bold;
+  border-radius: 20px;
+  border: 0;
+  text-transform: uppercase;
+}
+
+.contact form button:hover,
+.contact form button:focus {
+  background: #777;
+  color: #fff;
+  outline: 0;
+  transition: background-color 1s ease-out;
+}
+
+/* LARGE SCREENS */
+@media (min-width: 700px) {
+  .wrapper {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+  }
+
+  .wrapper > * {
+    padding: 2em;
+  }
+
+  .company-info h3,
+  .company-info ul,
+  .brand {
+    text-align: left;
+  }
+}
