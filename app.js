@@ -17,7 +17,8 @@ app.use(express.json());
 
 //STATIC FOLDER
 app.use("/public", express.static(path.join(__dirname, "public")));
-
+app.use("/views", express.static(path.join(__dirname, "views")));
+// app.setBaseViewsDir(join(__dirname, '..', 'views'));
 
 // field data
 app.post('/email', (req, res) => {
